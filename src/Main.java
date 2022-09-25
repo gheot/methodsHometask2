@@ -45,7 +45,7 @@ public class Main {
             daysCounter++;
         }
         if (deliveryDistance > 100) {
-            System.out.println("На это расстояние мы не доставляем");
+            System.out.println("На это расстояние мы не доставляем.");
         }
         System.out.println("Потребуется дней: " + daysCounter);
     }
