@@ -3,16 +3,16 @@ public class Main {
     public static void main(String[] args) {
         int year = 2022;
         leapYear(year);
-        String clientOS = "Android";
+        String clientOs = "Android";
         int YourDeviceYear = 2021;
-        checkOS(clientOS, YourDeviceYear);
+        checkOS(clientOs, YourDeviceYear);
         deliveryDaysCounter();
 
 
     }
 
     public static void leapYear(int a) {
-        if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0) {
+        if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0) {
             System.out.println(a + " - високосный год");
 
         } else {
@@ -21,17 +21,17 @@ public class Main {
 
     }
 
-    public static void checkOS(String OS, int deviceYear) {
+    public static void checkOS(String os, int deviceYear) {
         int currentYear = LocalDate.now().getYear();
-        if (OS.equals("IOS")) {
+        if (os.equals("IOS")) {
             System.out.println("IOS");
         } else {
             System.out.println("Android");
         }
         if (currentYear < deviceYear) {
-            System.out.println("Установите lite-версию для " + OS);
+            System.out.println("Установите lite-версию для " + os);
         } else {
-            System.out.println("Установите обычную версию для " + OS);
+            System.out.println("Установите обычную версию для " + os);
         }
     }
 
